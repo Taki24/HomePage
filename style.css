@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css?family=Gelasio|Girassol|Gupter|Indie+Flower|Inria+Serif|Open+Sans|Poppins|Roboto+Mono&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body, html { height: 100%; }
+
+body {
+   color: white;
+   overflow-x: hidden;
+}
+
+/* LOADER */
+div.loader {
+   position: fixed;
+   z-index: 999;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #000000;
+}
+
+@keyframes fadeOut {
+   75% {
+      opacity: 0.5;
+   }
+   100% {
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+
+#main {
+   height: 100%;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   background-attachment: fixed;
+   z-index: -1;
+   overflow: hidden;
+   font-family: "Inria Serif";
+}
+
+/* MIDDLE */
+div.middle {
+   width: 500px;
+   position: absolute;
+   top: -1.5%;
+   left: 50%;
+   transform: translateX(-50%);
+   display: block;
+   text-align: center;
+}
+
+div.time {
+   display: flex;
+   flex-direction: column;
+   user-select: none;
+}
+
+#time {
+   height: 125px;
+   font-size: 690%;
+   font-weight: 598;
+}
+
+#date { font-size: 180%; }
+
+#day {
+   font-size: 250%;
+   padding: 0;
+}
+
+div.todo-input {
+   margin: 100px 150px;
+   display: flex;
+   flex-direction: column;
+}
+
+#input {
+   margin-left: 70px;
+   width: 60px;
+   height: 30px;
+   font-size: 28px;
+   color: white;
+   padding-left: 10px;
+   background-color: inherit;
+   border-top-style: inherit;
+   border-left-style: inherit;
+   border-right-style: inherit;
+   border-bottom-color: white;
+   border-bottom-width: medium;
+   animation: back 0.5s ease-out forwards;
+}
+
+#input:focus { animation: strech 0.8s ease-out forwards; }
+
+@keyframes strech {
+   0% {
+      width: 60px;
+   }
+   100% {
+      width: 180px;
+      margin-left: 10px;
+   }
+}
+@keyframes back {
+   0% {
+      width: 180px;
+      margin-left: 10px;
+   }
+   100% {
+      width: 60px;
+   }
+}
+
+#new-element-button {
+   width: 75px;
+   height: 30px;
+   margin: 27px 60px;
+   font-size: 20px;
+   color: white;
+   background-color: inherit;
+   border-radius: 3.5px;
+}
+
+#new-element-button:hover {
+   background-color: rgb(255, 255, 255, 0.35);
+}
+
+/* TODOLIST */
+#todo-list {
+   position: absolute;
+   top: 25%;
+   right: 20px;
+   font-size: 130%;
+}
+
+#todo-list > li {
+   cursor: pointer;
+   padding-top: 15px;
+}
+
+#todo-list > li.checked {
+   text-decoration: line-through;
+}
+
+/* IDÉZET */
+div.quote {
+   position: absolute;
+   bottom: 2%;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 120%;
+   text-align: center;
+   cursor: pointer;
+}
+
+#author {
+   padding-top: 10px;
+   text-align: center;
+}
+
+/* LEFT SIDE ANIMATION */
+div.leftSide {
+   position: absolute;
+   top: 0;
+   left: -269.8px;
+   width: 269.8px;
+   height: 100%;
+   border-right: 4px solid black;
+   opacity: 1;
+   overflow-y: auto;
+   min-height: 100%;
+   background-image: url("./Picts/brick.jpg");
+   background-repeat: repeat-y;
+   background-size: contain;
+}
+
+#icon:hover, div.leftSide:hover + #icon {
+   opacity: 1;
+}
+
+#icon:hover { color: #737373; }
+
+#icon {
+   position: absolute;
+   top: 45%;
+   left: -16px;
+   font-size: 60px;
+   color: #e6e6e6;
+   opacity: 0;
+   transform: rotateY(0deg);
+   cursor: pointer;
+}
+
+.boxes {
+   position: absolute;
+   top: 40px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.box {
+   width: 180px;
+   height: 60px;
+   display: flex;
+   margin-bottom: 30px;
+   padding: 0px;
+   background-color: rgba(255, 255, 255, 0.7);
+   border: 2px solid black;
+   border-radius: 8px;
+   font-size: 20px;
+   text-align: center;
+}
+
+.box a {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   font-weight: 670;
+   color: black;
+}
+
+.box:hover { background: #d9ece1 }
+
+@keyframes leftSideOpen {
+   0% {
+      left: -269.8px;
+   }
+   100% {
+      left: 0;
+   }
+}
+@keyframes leftSideClose {
+   0% {
+      left: 0;
+   }
+   100% {
+      left: -269.8px;
+   }
+}
+
+@keyframes iconOpen {
+   0% {
+      left: -16px;
+      opacity: 1;
+      transform: rotateY(0deg);
+   }
+   100% {
+      opacity: 1;
+      transform: rotate(-180deg);
+      left: 240px;
+   }
+}
+@keyframes iconClose {
+   0% {
+      opacity: 1;
+      transform: rotate(-180deg);
+      left: 240px;
+   }
+   100% {
+      left: -16px;
+      transform: rotateY(0deg);
+   }
+}
+
+/* COMMAND PALETTE */
+.commandP {
+   width: 500px;
+   height: 300px;
+   position: relative;
+   top: -50%;
+   margin: auto;
+   transform: rotate(-3deg);
+   border: 3px solid #0d0d0d;
+   border-radius: 8px;
+   background-color: rgb(74, 35, 28, 0.98);
+}
+
+@keyframes disappear {
+   0% {
+      top: 20%;
+   }
+   100% {
+      top: -50%;
+   }
+}
+
+@keyframes appear {
+   0% {
+      top: -50%;
+   }
+   50% {
+      top: 20%;
+   }
+   60% {
+      top: 22%;
+   }
+   80% {
+      top: 17%;
+   }
+   100% {
+      top: 20%;
+   }
+}
+
+#commandLine {
+   position: absolute;
+   top: 65%;
+   left: 50%;
+   transform: translate(-50%);
+}
+
+#commandInput {
+   width: 0px;
+   height: 0px;
+   background: rgb(255, 255, 255, 0.2);
+   border-top: 1px black solid;
+   border-bottom: 4px black solid;
+   border-right: none;
+   border-left: none;
+   border-radius: 5px;
+   color: white;
+   font-size: 22px;
+   text-align: center;
+}
+
+@keyframes inputAnimation {
+   0% {
+      width: 0px;
+      height: 0px;
+   }
+   100% {
+      width: 250px;
+      height: 40px;
+   }
+}
+
+@keyframes inputAnimationBack {
+   0% {
+      width: 250px;
+      height: 40px;
+   }
+   100% {
+      width: 0px;
+      height: 0px;
+   }
+}
+
+.circle {
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   top: 7px;
+   border-radius: 50%;
+   background-color: black;
+}
+
+.circleLeft { left: 10px; }
+
+.circleRight { right: 10px; }
+
+.lineLeft {
+   position: absolute;
+   top: -480px;
+   left: 35px;
+   height: 500px;
+   border-left: 7px solid #392613;
+   transform: rotate(3deg);
+}
+
+.lineRight {
+   position: absolute;
+   top: -480px;
+   right: 8px;
+   height: 500px;
+   border-left: 7px solid #392613;
+   transform: rotate(3deg);
+}
+
+#commandText {
+   position: absolute;
+   top: 70px;
+   left: 85px;
+   width: 300px;
+   font-size: 30px;
+   color: white;
+   font-family: "Inria Serif";
+}
+
+#sirPicture {
+   width: 120px;
+   height: 120px;
+   position: absolute;
+   top: 30px;
+   right: 60px;
+   transform: scaleX(-1);
+}
+
+#incorrectCommand {
+   opacity: 0;
+}

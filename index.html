@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hun">
+   <head>
+      <meta charset="utf-8">
+      <title>Welcome Home</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="FontAwesome/css/all.css">
+   </head>
+   <body>
+      <div class="loader">
+         <img src="./Picts/gif3.gif" id="loader1">
+      </div>
+      <div id="main">
+         <div class="middle">
+            <div class="time">
+               <span id="time"></span>
+               <span id="day"></span>
+               <span id="date"></span>
+            </div>
+            <div class="todo-input">
+               <input type="text" id="input">
+               <button id="new-element-button">Add</button>
+            </div>
+         </div>
+         <ul id="todo-list"></ul>
+         <div class="quote" onclick="show()">
+            <p id="quotes"></p>
+            <p id="author"></p>
+         </div>
+         <div class="leftSide">
+            <div class="boxes">
+               <div class="box"><a href="./OtherProjects/TempConverter/index.html" target="_blank">Temperature Converter</a></div>
+               <div class="box"><a href="./OtherProjects/FftLandScape/index.html" target="_blank">FFT LandScape</a></div>
+               <div class="box"><a href="./OtherProjects/DancinSquares/index.html" target="_blank">Dancin Squares</a></div>
+               <div class="box"><a href="./OtherProjects/SpaceBending/index.html" target="_blank">Space Bending</a></div>
+               <div class="box"><a href="./OtherProjects/FallGame/index.html" target="_blank">Fall Game</a></div>
+               <div class="box"><a href="#">New Project's PlaceHolder</a></div>
+               <div class="box"><a href="#">New Project's PlaceHolder 2.0</a></div>
+            </div>
+         </div>
+         <i class="fas fa-chevron-circle-right" id="icon"></i>
+         <div class="commandP">
+            <div class="lineLeft"></div>
+            <div class="lineRight"></div>
+            <div class="circle circleLeft"></div>
+            <div class="circle circleRight"></div>
+            <div id="commandLine">
+               <input type="text" id="commandInput">
+            </div>
+            <div id="incorrectCommand"></div>
+            <span id="commandText">Waiting for your command, Sir!</span>
+            <img src="./Picts/sirr.png" id="sirPicture">
+         </div>
+      </div>
+
+      <script type="text/javascript" src="quotes.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+   </body>
+</html>
