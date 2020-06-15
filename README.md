@@ -6,8 +6,8 @@
 
 - Bal oldalon található egy lista. Ezt vagy paranccsal vagy az egér mozgatásával lehet megnyitni, illetve bezárni. Az kurzort a képernyő bal szélének közepére kell helyezni és a megjelenő ikonra kattintani. Itt látható még egy-kettő általam készített projekt, melynek nagy része a P5.js nevezetű javascript library segítségével készült.
 Ehhez segítség:
- - Fall Game: irányítás: nyilakkal, újraindítás: F5
- - FFT LandScape: 1. mikrofon engedélyezése
+  - Fall Game: irányítás: nyilakkal, újraindítás: F5
+  - FFT LandScape: 1. mikrofon engedélyezése
                   2. zene lejátszása úgy, hogy a mikrofon ezt hallja
 
 - A honlapon a háttér és a megjelenő idézet véletlenszerűen, automatikusan váltakozik. Az idézetek váltását egy egyszerű rákattintással is elérhetjük.
